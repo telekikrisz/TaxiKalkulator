@@ -5,8 +5,17 @@ int Alapdíj = 1100;
 int kmDíj = 440;
 double EjszakaSzorzo = 1.2;
 //3.feladat
-double osszesen = Alapdíj + (Tavolsag * kmDíj);
+double alapertek = Alapdíj + (Tavolsag * kmDíj);
+double osszesen = alapertek;
 if (Ejszaka)
 {
-    osszesen *= EjszakaSzorzo;
+    osszesen = osszesen*EjszakaSzorzo;
 }
+Console.WriteLine("========================================");
+Console.WriteLine($"Utas neve: {Utasnev}");
+Console.WriteLine($"Megtett távolság: {Tavolsag} km");
+Console.WriteLine($"Alapérték: {alapertek} Ft");
+Console.WriteLine($"Fizetendő végösszeg: {osszesen} Ft");
+if(Ejszaka) Console.WriteLine("Státusz: 20% éjszakai pótlék felszámolva.");
+else Console.WriteLine("Státusz: Normál díj felszámolva.");
+Console.WriteLine("========================================");
