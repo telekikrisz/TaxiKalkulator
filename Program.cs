@@ -4,7 +4,9 @@ bool Ejszaka=true;
 int Alapdíj = 1100;
 int kmDíj = 440;
 double EjszakaSzorzo = 1.2;
-
-
-
-
+//3.feladat
+double osszesen = Alapdíj + (Tavolsag * kmDíj);
+if (Ejszaka)
+{
+    osszesen *= EjszakaSzorzo;
+}
